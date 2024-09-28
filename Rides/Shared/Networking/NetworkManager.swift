@@ -30,7 +30,6 @@ extension NetworkManager {
         do {
             return try JSONDecoder().decode(type, from: data)
         } catch {
-            print("DEBUG: Error \((error))")
             throw error as? RidesAPIError ?? .unKnownError(error: error)
         }
     }

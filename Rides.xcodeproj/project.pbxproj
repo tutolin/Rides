@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FF628C602CA8536900F2B4C1 /* RidesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF628C5F2CA8536900F2B4C1 /* RidesApp.swift */; };
-		FF628C622CA8536900F2B4C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF628C612CA8536900F2B4C1 /* ContentView.swift */; };
+		FF628C622CA8536900F2B4C1 /* VehicleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF628C612CA8536900F2B4C1 /* VehicleListView.swift */; };
 		FF628C642CA8536C00F2B4C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF628C632CA8536C00F2B4C1 /* Assets.xcassets */; };
 		FF628C672CA8536C00F2B4C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF628C662CA8536C00F2B4C1 /* Preview Assets.xcassets */; };
 		FF628C712CA8536C00F2B4C1 /* RidesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF628C702CA8536C00F2B4C1 /* RidesTests.swift */; };
@@ -24,6 +24,8 @@
 		FF628CA22CA8580100F2B4C1 /* VehicleListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF628CA12CA8580100F2B4C1 /* VehicleListService.swift */; };
 		FF628CA42CA8583400F2B4C1 /* VehicleServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF628CA32CA8583400F2B4C1 /* VehicleServiceProtocol.swift */; };
 		FF628CA52CA8587400F2B4C1 /* MockVehicleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF628C972CA856EE00F2B4C1 /* MockVehicleList.swift */; };
+		FF628CA72CA85B6500F2B4C1 /* VehicleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF628CA62CA85B6500F2B4C1 /* VehicleRow.swift */; };
+		FF628CAA2CA85BFC00F2B4C1 /* VehicleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF628CA92CA85BFC00F2B4C1 /* VehicleListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +48,7 @@
 /* Begin PBXFileReference section */
 		FF628C5C2CA8536900F2B4C1 /* Rides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rides.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF628C5F2CA8536900F2B4C1 /* RidesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesApp.swift; sourceTree = "<group>"; };
-		FF628C612CA8536900F2B4C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FF628C612CA8536900F2B4C1 /* VehicleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListView.swift; sourceTree = "<group>"; };
 		FF628C632CA8536C00F2B4C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF628C662CA8536C00F2B4C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FF628C6C2CA8536C00F2B4C1 /* RidesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RidesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +65,8 @@
 		FF628C9F2CA857DD00F2B4C1 /* MockVehicleListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVehicleListService.swift; sourceTree = "<group>"; };
 		FF628CA12CA8580100F2B4C1 /* VehicleListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListService.swift; sourceTree = "<group>"; };
 		FF628CA32CA8583400F2B4C1 /* VehicleServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleServiceProtocol.swift; sourceTree = "<group>"; };
+		FF628CA62CA85B6500F2B4C1 /* VehicleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleRow.swift; sourceTree = "<group>"; };
+		FF628CA92CA85BFC00F2B4C1 /* VehicleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,9 +117,9 @@
 		FF628C5E2CA8536900F2B4C1 /* Rides */ = {
 			isa = PBXGroup;
 			children = (
+				FF628C892CA8554700F2B4C1 /* App */,
 				FF628C8B2CA8556400F2B4C1 /* Core */,
 				FF628C8A2CA8555800F2B4C1 /* Shared */,
-				FF628C892CA8554700F2B4C1 /* App */,
 				FF628C632CA8536C00F2B4C1 /* Assets.xcassets */,
 				FF628C652CA8536C00F2B4C1 /* Preview Content */,
 			);
@@ -203,8 +207,9 @@
 			isa = PBXGroup;
 			children = (
 				FF628C9A2CA8575600F2B4C1 /* Models */,
-				FF628C9B2CA8576100F2B4C1 /* Services */,
 				FF628C9C2CA8578000F2B4C1 /* Views */,
+				FF628CA82CA85BCB00F2B4C1 /* ViewModels */,
+				FF628C9B2CA8576100F2B4C1 /* Services */,
 			);
 			path = VehicleList;
 			sourceTree = "<group>";
@@ -230,9 +235,18 @@
 		FF628C9C2CA8578000F2B4C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FF628C612CA8536900F2B4C1 /* ContentView.swift */,
+				FF628C612CA8536900F2B4C1 /* VehicleListView.swift */,
+				FF628CA62CA85B6500F2B4C1 /* VehicleRow.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FF628CA82CA85BCB00F2B4C1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FF628CA92CA85BFC00F2B4C1 /* VehicleListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,15 +380,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF628CA42CA8583400F2B4C1 /* VehicleServiceProtocol.swift in Sources */,
-				FF628C622CA8536900F2B4C1 /* ContentView.swift in Sources */,
+				FF628C622CA8536900F2B4C1 /* VehicleListView.swift in Sources */,
 				FF628C602CA8536900F2B4C1 /* RidesApp.swift in Sources */,
 				FF628C932CA855EB00F2B4C1 /* NetworkManager.swift in Sources */,
 				FF628C8F2CA855C500F2B4C1 /* Constants.swift in Sources */,
 				FF628C9E2CA857B000F2B4C1 /* Vehicle.swift in Sources */,
 				FF628CA22CA8580100F2B4C1 /* VehicleListService.swift in Sources */,
+				FF628CA72CA85B6500F2B4C1 /* VehicleRow.swift in Sources */,
 				FF628CA52CA8587400F2B4C1 /* MockVehicleList.swift in Sources */,
 				FF628C912CA855D500F2B4C1 /* APIConfiguration.swift in Sources */,
 				FF628CA02CA857DD00F2B4C1 /* MockVehicleListService.swift in Sources */,
+				FF628CAA2CA85BFC00F2B4C1 /* VehicleListViewModel.swift in Sources */,
 				FF628C952CA8560900F2B4C1 /* RidesAPIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

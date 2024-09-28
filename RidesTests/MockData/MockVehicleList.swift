@@ -129,7 +129,7 @@ let mockVehicleList: Data = """
          "Airbag: Driver"
       ],
       "specs":[
-         "20\" x 9.0\" front  20\" x 10.0\" rear aluminum wheels",
+         "rear aluminum wheels",
          "Leather-wrapped parking brake handle",
          "Front wheel drive",
          "Immobilizer system",
