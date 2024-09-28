@@ -8,54 +8,26 @@
 import SwiftUI
 
 struct VehicleDetailView: View {
-    let vehicle: Vehicle
-    
-    var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
-                headerSection
-                detailsSection
-            }
-            .padding()
-        }
-        .navigationBarTitleDisplayMode(.inline)
-    }
-    
-    private var headerSection: some View {
-        VStack(alignment: .center, spacing: 10) {
-            Image(systemName: "car.fill")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 100)
-                .foregroundColor(.blue)
-            
-            Text(vehicle.makeAndModel)
-                .font(.title)
-                .fontWeight(.bold)
-        }
-        .frame(maxWidth: .infinity)
-    }
-    
-    private var detailsSection: some View {
-        VStack(alignment: .leading, spacing: 15) {
-            detailRow(title: "VIN", value: vehicle.vin)
-            detailRow(title: "Color", value: vehicle.color)
-            detailRow(title: "Type", value: vehicle.carType)
-        }
-    }
-    
-    private func detailRow(title: String, value: String) -> some View {
-        HStack {
-            Text(title)
-                .fontWeight(.semibold)
-                .frame(width: 100, alignment: .leading)
-            Text(value)
-                .frame(maxWidth: .infinity, alignment: .leading)
-        }
-    }
-    
-}
+@StateObject private var viewModel: VehicleDetailViewModel
+@State private var currentPage = 0
 
+init(vehicle: Vehicle) {
+       _viewModel = StateObject(wrappedValue: VehicleDetailViewModel(vehicle: vehicle))
+   }
+   
+var body: some View {
+       TabView(selection: $currentPage) {
+           VehicleInfoPage(vehicle: viewModel.vehicle)
+               .tag(0)
+           
+           CarbonEmissionsPage(viewModel: viewModel)
+               .tag(1)
+       }
+       .tabViewStyle(.page)
+       .indexViewStyle(.page(backgroundDisplayMode: .always))
+       .navigationBarTitleDisplayMode(.inline)
+   }
+}
 #Preview {
     VehicleDetailView(vehicle: Vehicle.mockVehicle)
 }
