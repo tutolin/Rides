@@ -343,3 +343,41 @@ let mockVehicleList: Data = """
    }
 ]
 """.data(using: .utf8)!
+let mockVehicles_invalidJSON: Data = """
+[
+   {
+      "id1":5191,
+      "uid":"4d3e6ca5-865a-4284-81ad-2a34311b472e",
+      "vin":"7E0YTYDRXLG277174",
+      "make_and_model":"Buick Enclave",
+      "color":"Red",
+      "transmission":"CVT",
+      "drive_type":"AWD",
+      "fuel_type":"Gasoline Hybrid",
+      "car_type":"Crew Cab Pickup",
+      "car_options":[
+         "Power Locks",
+         "Airbag: Side",
+         "Fog Lights",
+         "A/C: Rear",
+         "Navigation",
+         "Airbag: Side",
+         "Keyless Entry",
+         "CD (Single Disc)"
+      ],
+      "specs":[
+         "Dual front 2-stage airbags -inc: passenger occupant classification system w/twin-chamber airbag",
+         "Dual-zone automatic climate control system -inc: smog sensor, auto recirculation, clear air filter, pollen filter",
+         "160-amp alternator",
+         "Enhanced accident response system unlocks the doors, shuts off the fuel pump and turns on interior lights after airbag deploys",
+         "1.8L DOHC 16-valve I4 engine -inc: engine cover",
+         "Battery saver",
+         "Child safety rear door locks"
+      ],
+      "doors":3,
+      "mileage":60612,
+      "kilometrage":19535,
+      "license_plate":"WEV-4081"
+   }
+]
+""".data(using: .utf8)!

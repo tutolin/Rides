@@ -15,6 +15,10 @@ class VehicleListViewModel: ObservableObject {
     @Published var sortOrder: SortOrder = .vin
     @Published var alertItem: AlertItem?
  
+    var inputIsValid: Bool {
+        guard let count = Int(vehicleCount) else { return false }
+        return (1...100).contains(count)
+    }
     
     private let service: VehicleServiceProtocol
     
@@ -28,15 +32,19 @@ class VehicleListViewModel: ObservableObject {
     }
     
     func fetchVehicles() async {
+        guard inputIsValid, let count = Int(vehicleCount) else {
+            alertItem = AlertItem(title: "Invalid Input", message: "Please enter a number between 1 and 100.")
+            return
+        }
         isLoading = true
         do {
-            let fetchedVehicles = try await service.getVehiclesList(count: Int(vehicleCount) ?? 0)
+            let fetchedVehicles = try await service.getVehiclesList(count: count)
             vehicles = fetchedVehicles
             sortVehicles()
             isLoading = false
         } catch {
-            isLoading = false
             handleError(error)
+            isLoading = false
         }
     }
     

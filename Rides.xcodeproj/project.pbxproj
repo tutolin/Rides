@@ -11,7 +11,7 @@
 		FF628C622CA8536900F2B4C1 /* VehicleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF628C612CA8536900F2B4C1 /* VehicleListView.swift */; };
 		FF628C642CA8536C00F2B4C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF628C632CA8536C00F2B4C1 /* Assets.xcassets */; };
 		FF628C672CA8536C00F2B4C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF628C662CA8536C00F2B4C1 /* Preview Assets.xcassets */; };
-		FF628C712CA8536C00F2B4C1 /* RidesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF628C702CA8536C00F2B4C1 /* RidesTests.swift */; };
+		FF628C712CA8536C00F2B4C1 /* VehicleListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF628C702CA8536C00F2B4C1 /* VehicleListViewModelTests.swift */; };
 		FF628C7B2CA8536C00F2B4C1 /* RidesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF628C7A2CA8536C00F2B4C1 /* RidesUITests.swift */; };
 		FF628C7D2CA8536C00F2B4C1 /* RidesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF628C7C2CA8536C00F2B4C1 /* RidesUITestsLaunchTests.swift */; };
 		FF628C8F2CA855C500F2B4C1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF628C8E2CA855C500F2B4C1 /* Constants.swift */; };
@@ -53,7 +53,7 @@
 		FF628C632CA8536C00F2B4C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF628C662CA8536C00F2B4C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FF628C6C2CA8536C00F2B4C1 /* RidesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RidesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF628C702CA8536C00F2B4C1 /* RidesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesTests.swift; sourceTree = "<group>"; };
+		FF628C702CA8536C00F2B4C1 /* VehicleListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListViewModelTests.swift; sourceTree = "<group>"; };
 		FF628C762CA8536C00F2B4C1 /* RidesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RidesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF628C7A2CA8536C00F2B4C1 /* RidesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesUITests.swift; sourceTree = "<group>"; };
 		FF628C7C2CA8536C00F2B4C1 /* RidesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				FF628C962CA856BD00F2B4C1 /* MockData */,
-				FF628C702CA8536C00F2B4C1 /* RidesTests.swift */,
+				FF628C702CA8536C00F2B4C1 /* VehicleListViewModelTests.swift */,
 			);
 			path = RidesTests;
 			sourceTree = "<group>";
@@ -420,7 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF628C982CA856EE00F2B4C1 /* MockVehicleList.swift in Sources */,
-				FF628C712CA8536C00F2B4C1 /* RidesTests.swift in Sources */,
+				FF628C712CA8536C00F2B4C1 /* VehicleListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
