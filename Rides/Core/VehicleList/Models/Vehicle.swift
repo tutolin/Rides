@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Vehicle: Codable, Identifiable {
+struct Vehicle: Codable, Identifiable, Hashable {
     let id: Int
     let uid, vin, makeAndModel, color: String
     let transmission, driveType, fuelType, carType: String
@@ -26,4 +26,24 @@ struct Vehicle: Codable, Identifiable {
         case specs, doors, mileage, kilometrage
         case licensePlate = "license_plate"
     }
+}
+
+extension Vehicle {
+    static let mockVehicle = Vehicle(
+        id: 1,
+        uid: "6551ff87-f66b-47f8-bebb-f2105330b781",
+        vin: "1HGCM82633A123456",
+        makeAndModel: "Honda Civic",
+        color: "Blue",
+        transmission: "Automatic",
+        driveType: "FWD",
+        fuelType: "Gasoline",
+        carType: "Sedan",
+        carOptions: ["Air Conditioning", "Power Windows", "Bluetooth"],
+        specs: ["Roof mounted antenna", "Rearview Camera"],
+        doors: 4,
+        mileage: 12000,
+        kilometrage: 3000,
+        licensePlate: "ABC-1234"
+    )
 }

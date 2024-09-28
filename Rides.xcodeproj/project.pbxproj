@@ -26,6 +26,7 @@
 		FF628CA52CA8587400F2B4C1 /* MockVehicleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF628C972CA856EE00F2B4C1 /* MockVehicleList.swift */; };
 		FF628CA72CA85B6500F2B4C1 /* VehicleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF628CA62CA85B6500F2B4C1 /* VehicleRow.swift */; };
 		FF628CAA2CA85BFC00F2B4C1 /* VehicleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF628CA92CA85BFC00F2B4C1 /* VehicleListViewModel.swift */; };
+		FF628CAE2CA85D9F00F2B4C1 /* VehicleDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF628CAD2CA85D9F00F2B4C1 /* VehicleDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		FF628CA32CA8583400F2B4C1 /* VehicleServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleServiceProtocol.swift; sourceTree = "<group>"; };
 		FF628CA62CA85B6500F2B4C1 /* VehicleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleRow.swift; sourceTree = "<group>"; };
 		FF628CA92CA85BFC00F2B4C1 /* VehicleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListViewModel.swift; sourceTree = "<group>"; };
+		FF628CAD2CA85D9F00F2B4C1 /* VehicleDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 		FF628C8B2CA8556400F2B4C1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				FF628CAB2CA85D4D00F2B4C1 /* VehicleDetails */,
 				FF628C992CA8574700F2B4C1 /* VehicleList */,
 			);
 			path = Core;
@@ -247,6 +250,22 @@
 				FF628CA92CA85BFC00F2B4C1 /* VehicleListViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FF628CAB2CA85D4D00F2B4C1 /* VehicleDetails */ = {
+			isa = PBXGroup;
+			children = (
+				FF628CAC2CA85D6800F2B4C1 /* Views */,
+			);
+			path = VehicleDetails;
+			sourceTree = "<group>";
+		};
+		FF628CAC2CA85D6800F2B4C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FF628CAD2CA85D9F00F2B4C1 /* VehicleDetailsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,6 +404,7 @@
 				FF628C932CA855EB00F2B4C1 /* NetworkManager.swift in Sources */,
 				FF628C8F2CA855C500F2B4C1 /* Constants.swift in Sources */,
 				FF628C9E2CA857B000F2B4C1 /* Vehicle.swift in Sources */,
+				FF628CAE2CA85D9F00F2B4C1 /* VehicleDetailsView.swift in Sources */,
 				FF628CA22CA8580100F2B4C1 /* VehicleListService.swift in Sources */,
 				FF628CA72CA85B6500F2B4C1 /* VehicleRow.swift in Sources */,
 				FF628CA52CA8587400F2B4C1 /* MockVehicleList.swift in Sources */,

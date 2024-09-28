@@ -16,18 +16,26 @@ struct VehicleListView: View {
         _viewModel = StateObject(wrappedValue: VehicleListViewModel(service: service))
     }
     
-var body: some View {
-        VStack(spacing: 20) {
-            vehicleInputSection
-            sortingSection
-            vehicleList
-            Spacer()
-        }
-        .navigationTitle("Ride Explorer")
-        .alert(item: $viewModel.alertItem) { alertItem in
-            Alert(title: Text(alertItem.title),
-                  message: Text(alertItem.message),
-                  dismissButton: .default(Text("OK")))
+    var body: some View {
+        NavigationStack {
+            VStack(spacing: 20) {
+                vehicleInputSection
+                sortingSection
+                vehicleList
+                Spacer()
+            }
+            .navigationTitle("Ride Explorer")
+            .alert(item: $viewModel.alertItem) { alertItem in
+                Alert(title: Text(alertItem.title),
+                      message: Text(alertItem.message),
+                      dismissButton: .default(Text("OK")))
+            }
+            .navigationTitle("Ride Explorer")
+            .alert(item: $viewModel.alertItem) { alertItem in
+                Alert(title: Text(alertItem.title),
+                      message: Text(alertItem.message),
+                      dismissButton: .default(Text("OK")))
+            }
         }
     }
     
@@ -82,7 +90,9 @@ var body: some View {
             } else {
                 List {
                     ForEach(viewModel.vehicles) { vehicle in
-                        VehicleRow(vehicle: vehicle)
+                        NavigationLink(value: vehicle) {
+                            VehicleRow(vehicle: vehicle)
+                        }
                          
                     }
                 }
@@ -90,6 +100,9 @@ var body: some View {
                     await viewModel.fetchVehicles()
                 }
             }
+        }
+        .navigationDestination(for: Vehicle.self) { vehicle in
+            VehicleDetailView(vehicle: vehicle)
         }
     }
 }
